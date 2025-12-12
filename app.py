@@ -21,7 +21,7 @@ with st.form("prediction_form"):
         children = st.number_input("Number of Children", min_value=0, max_value=8, value=0)
     with col2:
         bloodpressure = st.number_input("Blood Pressure", min_value=60, max_value=200, value=120)
-        gender=st.selectbox("Gender", options=le_gender.classes_)
+        gender=st.selectbox("Gender (F=0,M=1)", options=le_gender.classes_)
         diabetic=st.selectbox("Diabetic", options=le_diabetic.classes_)
         smoker=st.selectbox("Smoker", options=le_smoker.classes_)
     submitted = st.form_submit_button("Predict Payment")
